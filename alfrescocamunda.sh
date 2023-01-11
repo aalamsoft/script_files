@@ -37,6 +37,8 @@ chmod a+r /etc/apt/keyrings/docker.gpg
 apt-get update
 apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sleep 90
+apt-get install -y docker-compose
+sleep 90
 
 
 echo "###############################################"
@@ -48,7 +50,7 @@ sleep 5
 
 git clone https://github.com/Alfresco/acs-deployment.git
 cd acs-deployment/docker-compose
-docker-compose -f community-docker-compose.yml up &
+docker-compose -f community-docker-compose.yml up -d
 Sleep 500
 
 echo "###############################################"
@@ -60,5 +62,5 @@ sleep 5
 
 cd /root/
 wget https://github.com/aalamsoft/script_files/raw/main/camunda_8.yaml
-docker compose -f camunda_8.yaml up &
+docker compose -f camunda_8.yaml up -d
 Sleep 500
