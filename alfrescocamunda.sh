@@ -49,7 +49,7 @@ sleep 5
 git clone https://github.com/Alfresco/acs-deployment.git
 cd acs-deployment/docker-compose
 docker-compose -f community-docker-compose.yml up &
-Sleep 300
+Sleep 500
 
 echo "###############################################"
 
@@ -61,4 +61,4 @@ sleep 5
 cd /root/
 wget https://github.com/aalamsoft/script_files/raw/main/camunda_8.yaml
 docker compose -f camunda_8.yaml up &
-Sleep 300
+Sleep 500
